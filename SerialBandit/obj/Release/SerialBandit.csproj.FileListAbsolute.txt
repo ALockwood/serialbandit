@@ -1,0 +1,33 @@
+C:\Documents and Settings\admin-devxp\My Documents\Visual Studio 2008\Projects\SerialBandit\SerialBandit\bin\Release\SerialBandit.exe.config
+C:\Documents and Settings\admin-devxp\My Documents\Visual Studio 2008\Projects\SerialBandit\SerialBandit\bin\Release\SerialBandit.exe
+C:\Documents and Settings\admin-devxp\My Documents\Visual Studio 2008\Projects\SerialBandit\SerialBandit\bin\Release\SerialBandit.pdb
+C:\Documents and Settings\admin-devxp\My Documents\Visual Studio 2008\Projects\SerialBandit\SerialBandit\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\admin-devxp\My Documents\Visual Studio 2008\Projects\SerialBandit\SerialBandit\obj\Release\wnd_com.baml
+C:\Documents and Settings\admin-devxp\My Documents\Visual Studio 2008\Projects\SerialBandit\SerialBandit\obj\Release\wnd_main.baml
+C:\Documents and Settings\admin-devxp\My Documents\Visual Studio 2008\Projects\SerialBandit\SerialBandit\obj\Release\wnd_com.g.cs
+C:\Documents and Settings\admin-devxp\My Documents\Visual Studio 2008\Projects\SerialBandit\SerialBandit\obj\Release\wnd_main.g.cs
+C:\Documents and Settings\admin-devxp\My Documents\Visual Studio 2008\Projects\SerialBandit\SerialBandit\obj\Release\App.g.cs
+C:\Documents and Settings\admin-devxp\My Documents\Visual Studio 2008\Projects\SerialBandit\SerialBandit\obj\Release\SerialBandit_MarkupCompile.cache
+C:\Documents and Settings\admin-devxp\My Documents\Visual Studio 2008\Projects\SerialBandit\SerialBandit\obj\Release\SerialBandit.g.resources
+C:\Documents and Settings\admin-devxp\My Documents\Visual Studio 2008\Projects\SerialBandit\SerialBandit\obj\Release\SerialBandit.Properties.Resources.resources
+C:\Documents and Settings\admin-devxp\My Documents\Visual Studio 2008\Projects\SerialBandit\SerialBandit\obj\Release\SerialBandit.csproj.GenerateResource.Cache
+C:\Documents and Settings\admin-devxp\My Documents\Visual Studio 2008\Projects\SerialBandit\SerialBandit\obj\Release\SerialBandit.exe
+C:\Documents and Settings\admin-devxp\My Documents\Visual Studio 2008\Projects\SerialBandit\SerialBandit\obj\Release\SerialBandit.pdb
+C:\Documents and Settings\admin-devxp\My Documents\Visual Studio 2008\Projects\SerialBandit\SerialBandit\obj\Release\SerialBandit.AboutMe.resources
+C:\Programming\serialbandit\SerialBandit\bin\Release\SerialBandit.exe.config
+C:\Programming\serialbandit\SerialBandit\obj\Release\SerialBandit.exe
+C:\Programming\serialbandit\SerialBandit\obj\Release\SerialBandit.pdb
+C:\Programming\serialbandit\SerialBandit\bin\Release\SerialBandit.exe
+C:\Programming\serialbandit\SerialBandit\bin\Release\SerialBandit.pdb
+C:\Programming\serialbandit\SerialBandit\obj\Release\ResolveAssemblyReference.cache
+C:\Programming\serialbandit\SerialBandit\obj\Release\wnd_com.baml
+C:\Programming\serialbandit\SerialBandit\obj\Release\wnd_main.baml
+C:\Programming\serialbandit\SerialBandit\obj\Release\wnd_com.g.cs
+C:\Programming\serialbandit\SerialBandit\obj\Release\wnd_main.g.cs
+C:\Programming\serialbandit\SerialBandit\obj\Release\App.g.cs
+C:\Programming\serialbandit\SerialBandit\obj\Release\SerialBandit_MarkupCompile.cache
+C:\Programming\serialbandit\SerialBandit\obj\Release\SerialBandit.g.resources
+C:\Programming\serialbandit\SerialBandit\obj\Release\SerialBandit.AboutMe.resources
+C:\Programming\serialbandit\SerialBandit\obj\Release\SerialBandit.Properties.Resources.resources
+C:\Programming\serialbandit\SerialBandit\obj\Release\ResGen.read.1.tlog
+C:\Programming\serialbandit\SerialBandit\obj\Release\ResGen.write.1.tlog

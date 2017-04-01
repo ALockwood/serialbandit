@@ -1,0 +1,16 @@
+C:\Documents and Settings\admin-devxp\My Documents\Visual Studio 2008\Projects\SerialBandit\SerialBandit\bin\Debug\SerialBandit.exe.config
+C:\Documents and Settings\admin-devxp\My Documents\Visual Studio 2008\Projects\SerialBandit\SerialBandit\bin\Debug\SerialBandit.exe
+C:\Documents and Settings\admin-devxp\My Documents\Visual Studio 2008\Projects\SerialBandit\SerialBandit\bin\Debug\SerialBandit.pdb
+C:\Documents and Settings\admin-devxp\My Documents\Visual Studio 2008\Projects\SerialBandit\SerialBandit\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\admin-devxp\My Documents\Visual Studio 2008\Projects\SerialBandit\SerialBandit\obj\Debug\wnd_com.baml
+C:\Documents and Settings\admin-devxp\My Documents\Visual Studio 2008\Projects\SerialBandit\SerialBandit\obj\Debug\wnd_main.baml
+C:\Documents and Settings\admin-devxp\My Documents\Visual Studio 2008\Projects\SerialBandit\SerialBandit\obj\Debug\wnd_com.g.cs
+C:\Documents and Settings\admin-devxp\My Documents\Visual Studio 2008\Projects\SerialBandit\SerialBandit\obj\Debug\wnd_main.g.cs
+C:\Documents and Settings\admin-devxp\My Documents\Visual Studio 2008\Projects\SerialBandit\SerialBandit\obj\Debug\App.g.cs
+C:\Documents and Settings\admin-devxp\My Documents\Visual Studio 2008\Projects\SerialBandit\SerialBandit\obj\Debug\SerialBandit_MarkupCompile.cache
+C:\Documents and Settings\admin-devxp\My Documents\Visual Studio 2008\Projects\SerialBandit\SerialBandit\obj\Debug\SerialBandit.g.resources
+C:\Documents and Settings\admin-devxp\My Documents\Visual Studio 2008\Projects\SerialBandit\SerialBandit\obj\Debug\SerialBandit.Properties.Resources.resources
+C:\Documents and Settings\admin-devxp\My Documents\Visual Studio 2008\Projects\SerialBandit\SerialBandit\obj\Debug\SerialBandit.csproj.GenerateResource.Cache
+C:\Documents and Settings\admin-devxp\My Documents\Visual Studio 2008\Projects\SerialBandit\SerialBandit\obj\Debug\SerialBandit.exe
+C:\Documents and Settings\admin-devxp\My Documents\Visual Studio 2008\Projects\SerialBandit\SerialBandit\obj\Debug\SerialBandit.pdb
+C:\Documents and Settings\admin-devxp\My Documents\Visual Studio 2008\Projects\SerialBandit\SerialBandit\obj\Debug\SerialBandit.AboutMe.resources

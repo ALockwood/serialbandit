@@ -1,0 +1,99 @@
+﻿<Window x:Class="SerialBandit.WindowMain"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="SerialBandit - 5xx Series Roomba Controller" Height="365" Width="666" 
+    Loaded="Window_Loaded"
+    Closing="Window_Closing"
+    Icon="RoombaBlack_Icon_Trans16x16.png" ResizeMode="NoResize">
+    <Grid>
+        <StatusBar Height="23" Name="sb_bottomStatus" VerticalAlignment="Bottom" BorderBrush="LightGray" BorderThickness="1">
+            <StatusBarItem Name="sbi_portName" BorderThickness="0" Foreground="DarkGray" BorderBrush="LightGray" 
+                           HorizontalAlignment="Center" VerticalAlignment="Center"></StatusBarItem>
+            <Separator/>
+
+            <StatusBarItem Name="sbi_baudRate" BorderThickness="0" Foreground="DarkGray" BorderBrush="LightGray" 
+                           HorizontalAlignment="Center" VerticalAlignment="Center"></StatusBarItem>
+            <Separator/>
+            <StatusBarItem Name="sbi_CurrentTime" BorderThickness="0" Foreground="Gray" BorderBrush="LightGray"
+                           HorizontalAlignment="Right" DockPanel.Dock="Right" VerticalAlignment="Center" FontStyle="italic"></StatusBarItem>
+
+            <StatusBarItem Name="sbi_CurrentTimeLbl" BorderThickness="0" Foreground="Gray" BorderBrush="LightGray"
+                           DockPanel.Dock="Right" HorizontalAlignment="Right" VerticalAlignment="Center" FontStyle="italic">
+                Current Time:</StatusBarItem>
+        </StatusBar>
+      
+
+        <Menu Height="22" Name="menu1" VerticalAlignment="Top">
+            <MenuItem Header="File" Name="mnui_File">
+                <MenuItem Header="Quit" Name="mnui_File_quit" Click="mnui_file_quit_Click"/>
+            </MenuItem>
+            <MenuItem Header="Settings" Name="mnui_Settings">
+                <MenuItem Header="COM Port Settings" Name="mnui_Settings_com" Click="mnui_Settings_com_Click"/>
+                <MenuItem Header="Roomba Model" Name="mnui_Settings_rmbamodel">
+                    <MenuItem Header="5xx" IsChecked="True" Name="rmbamodel_5xx"/>
+                </MenuItem>
+                <MenuItem Name="menu_saveCleanSched" Header="Save Cleaning Schedule On Exit" IsCheckable="True" IsChecked="True" Checked="Enable_Saving_CleaningSchedule" Unchecked="Disable_Saving_CleaningSchedule"/>
+            </MenuItem>
+            <MenuItem Header="Diagnostics" Name="mnui_Diagnostics">
+                <MenuItem Header="Communications Test" Name="mnui_Diagnostics_testcom">
+                    <MenuItem Header="Beep" Name="mnui_Diagnostics_testcom_beep" Click="mnui_Diagnostics_testcom_beep_Click" />
+                    <MenuItem Header="Blink Light" Name="mnui_Diagnostics_testcom_blink" Click="mnui_Diagnostics_testcom_blink_Click"/>
+                    <!--TODO: Add in the functionality
+                    <MenuItem Header="Check For Sensor Data Response" Name="mnui_Diagnostics_testcom_sensor"/>-->
+                </MenuItem>
+                <MenuItem Header="Put Roomba in Passive Mode" Name="mnui_Diagnostics_passive" Click="mnui_Diagnostics_passive_Click"/>
+                <MenuItem Header="Put Roomba into Safe Mode" Name="mnui_Diagnostics_safe" Click="mnui_Diagnostics_safe_Click"/>
+                <MenuItem Header="Put Roomba in Direct Mode" Name="mnui_Diagnostics_direct" Click="mnui_Diagnostics_direct_Click"/>
+                <MenuItem Header="Reset Roomba" Name="mnui_Diagnostics_reset" Click="mnui_Diagnostics_RESET_Click"/>
+            </MenuItem>
+            <MenuItem Header="Cleaning Commands" Name="mnui_CleaningCmds">
+                <MenuItem Header="Seek Dock" Name="mnui_CleaningCmds_seekdock" Click="mnui_Clean_SeekDock_Click"/>
+                <MenuItem Header="Start Cleaning Cycle" Name="mnui_CleaningCmds_clean" Click="mnui_Clean_reg_Click"/>
+                <MenuItem Header="Start Max Cleaning Cycle" Name="mnui_CleaningCmds_maxclean" Click="mnui_Clean_max_Click"/>
+                <MenuItem Header="Spot Clean" Name="mnui_CleaningCmds_spotclean" Click="mnui_Clean_spot_Click"/>
+            </MenuItem>
+            <MenuItem Header="Help" Name="mnui_Help">
+                <MenuItem Header="About..." Name="mnui_Help_about" Click="mnui_Help_about_Click"/>
+            </MenuItem>
+        </Menu>
+        
+        <CheckBox Height="16" Margin="18,0,0,222" Name="chk_mon" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="72" Unchecked="Checkbox_Check_Changed" Checked="Checkbox_Check_Changed" ClipToBounds="False">Monday</CheckBox>
+        <CheckBox Height="16" Margin="18,0,0,197" Name="chk_tue" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="72" Unchecked="Checkbox_Check_Changed" Checked="Checkbox_Check_Changed" ClipToBounds="False">Tuesday</CheckBox>
+        <CheckBox Height="16" Margin="18,0,0,172" Name="chk_wed" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="78" Unchecked="Checkbox_Check_Changed" Checked="Checkbox_Check_Changed" ClipToBounds="False">Wednesday</CheckBox>
+        <CheckBox Margin="18,0,0,148" Name="chk_thu" HorizontalAlignment="Left" Width="72" Unchecked="Checkbox_Check_Changed" Checked="Checkbox_Check_Changed" ClipToBounds="False" Height="15" VerticalAlignment="Bottom">Thursday</CheckBox>
+        <CheckBox Height="16" Margin="18,0,0,122" Name="chk_fri" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="72" Unchecked="Checkbox_Check_Changed" Checked="Checkbox_Check_Changed" ClipToBounds="False">Friday</CheckBox>
+        <CheckBox Height="16" Margin="18,0,0,97" Name="chk_sat" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="72" Unchecked="Checkbox_Check_Changed" Checked="Checkbox_Check_Changed" ClipToBounds="False">Saturday</CheckBox>
+        <CheckBox Height="16" Margin="18,0,0,72" Name="chk_sun" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="72" Unchecked="Checkbox_Check_Changed" Checked="Checkbox_Check_Changed" ClipToBounds="False">Sunday</CheckBox>
+
+        <Slider Height="24" Margin="100,0,71,216" Name="sl_mon" VerticalAlignment="Bottom" Delay="0" Maximum="1439" ValueChanged="Slider_Changed" SmallChange="1" Interval="1" TickPlacement="None" IsSnapToTickEnabled="True" IsMoveToPointEnabled="True" ToolTip="Use the arrow keys to fine-tune selections" IsEnabled="False" ClipToBounds="False" />
+        <Slider Height="24" Margin="100,0,71,191" Name="sl_tue" VerticalAlignment="Bottom" Delay="0" Maximum="1439" ValueChanged="Slider_Changed" SmallChange="1" Interval="1" TickPlacement="None" IsSnapToTickEnabled="True" IsMoveToPointEnabled="True" ToolTip="Use the arrow keys to fine-tune selections" IsEnabled="False" ClipToBounds="False" />
+        <Slider Height="24" Margin="100,0,71,166" Name="sl_wed" VerticalAlignment="Bottom" Delay="0" Maximum="1439" ValueChanged="Slider_Changed" SmallChange="1" Interval="1" TickPlacement="None" IsSnapToTickEnabled="True" IsMoveToPointEnabled="True" ToolTip="Use the arrow keys to fine-tune selections" IsEnabled="False" ClipToBounds="False" />
+        <Slider Margin="100,0,71,141" Name="sl_thu" Delay="0" Maximum="1439" ValueChanged="Slider_Changed" SmallChange="1" Interval="1" TickPlacement="None" IsSnapToTickEnabled="True" IsMoveToPointEnabled="True" ToolTip="Use the arrow keys to fine-tune selections" IsEnabled="False" Height="24" ClipToBounds="False" VerticalAlignment="Bottom" />
+        <Slider Height="24" Margin="100,0,71,116" Name="sl_fri" VerticalAlignment="Bottom" Delay="0" Maximum="1439" ValueChanged="Slider_Changed" SmallChange="1" Interval="1" TickPlacement="None" IsSnapToTickEnabled="True" IsMoveToPointEnabled="True" ToolTip="Use the arrow keys to fine-tune selections" IsEnabled="False" ClipToBounds="False" />
+        <Slider Height="24" Margin="100,0,71,91" Name="sl_sat" VerticalAlignment="Bottom" Delay="0" Maximum="1439" ValueChanged="Slider_Changed" SmallChange="1" Interval="1" TickPlacement="None" IsSnapToTickEnabled="True" IsMoveToPointEnabled="True" ToolTip="Use the arrow keys to fine-tune selections" IsEnabled="False" ClipToBounds="False" />
+        <Slider Height="24" Margin="100,0,71,66" Name="sl_sun" VerticalAlignment="Bottom" Delay="0" Maximum="1439" ValueChanged="Slider_Changed" SmallChange="1" Interval="1" TickPlacement="None" IsSnapToTickEnabled="True" IsMoveToPointEnabled="True" ToolTip="Use the arrow keys to fine-tune selections" IsEnabled="False" ClipToBounds="False" />
+
+        <TextBox Height="24" Margin="0,0,12,216"  Name="txt_mon" VerticalAlignment="Bottom" Text="" Padding="0px" HorizontalAlignment="Right" Width="58" HorizontalContentAlignment="Center" IsTabStop="False" AllowDrop="False" IsUndoEnabled="False" IsReadOnly="True" ClipToBounds="False" />
+        <TextBox Height="24" Margin="0,0,12,191" Name="txt_tue" VerticalAlignment="Bottom" Text="" Padding="0px" HorizontalAlignment="Right" Width="58" HorizontalContentAlignment="Center" IsTabStop="False" AllowDrop="False" IsUndoEnabled="False" IsReadOnly="True" ClipToBounds="False" />
+        <TextBox Height="24" Margin="0,0,12,166" Name="txt_wed" VerticalAlignment="Bottom" Text="" Padding="0px" HorizontalAlignment="Right" Width="58" HorizontalContentAlignment="Center" IsTabStop="False" AllowDrop="False" IsUndoEnabled="False" IsReadOnly="True" ClipToBounds="False" />
+        <TextBox Height="24" Margin="0,0,12,141" Name="txt_thu" VerticalAlignment="Bottom" Text="" Padding="0px" HorizontalAlignment="Right" Width="58" HorizontalContentAlignment="Center" IsTabStop="False" AllowDrop="False" IsUndoEnabled="False" IsReadOnly="True" ClipToBounds="False" />
+        <TextBox Height="24" Margin="0,0,12,116" Name="txt_fri" VerticalAlignment="Bottom" Text="" Padding="0px"  HorizontalAlignment="Right" Width="58" HorizontalContentAlignment="Center" IsTabStop="False" AllowDrop="False" IsUndoEnabled="False" IsReadOnly="True" ClipToBounds="False" />
+        <TextBox Height="24" Margin="0,0,12,91" Name="txt_sat"  VerticalAlignment="Bottom" Text="" Padding="0px"   HorizontalAlignment="Right" Width="58" HorizontalContentAlignment="Center" IsTabStop="False" AllowDrop="False" IsUndoEnabled="False" IsReadOnly="True" ClipToBounds="False" />
+        <TextBox Margin="0,0,12,66" Name="txt_sun" Text="" Padding="0px" HorizontalAlignment="Right" Width="58" HorizontalContentAlignment="Center" IsTabStop="False" AllowDrop="False" IsUndoEnabled="False" IsReadOnly="True" ClipToBounds="False" Height="24" VerticalAlignment="Bottom" />
+        
+        <TextBlock Height="30" Margin="85,46,53,0" Name="textBlock1" VerticalAlignment="Top" TextWrapping="Wrap"
+                   TextAlignment="Left" FontWeight="light" FontStyle="italic" ClipToBounds="False">
+            Check the box to enable cleaning for the corresponding day. Then drag the slider to the time you want cleaning to start.
+        </TextBlock>
+        
+        <Button Margin="0,0,224,37" Name="btn_SetSchedule" Height="23" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="75" Click="btn_SetSchedule_Click" ClipToBounds="False">Set Schedule</Button>
+        <Button Margin="0,0,118,37" Name="btn_ResetSchedule" Height="23" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="75" Click="btn_ResetSchedule_Click" ClipToBounds="False">Reset Values</Button>
+        <!-- TODO: Code in the graphics to work with the Roomba
+        <Image HorizontalAlignment="Left" Margin="24,85,0,104" Name="img_RoombaPanel" Stretch="Fill" Width="140" Source="/SerialBandit;component/Images/Roomba_Big_PowerButton_Trans.png" IsEnabled="True" />
+        <TextBlock Height="30" Margin="24,0,0,71" Name="tb_imageInfo2" VerticalAlignment="Bottom" TextWrapping="Wrap"
+         TextAlignment="Center" FontWeight="light" FontStyle="italic" HorizontalAlignment="Left" Width="140">
+         Your Roomba should mimic the display here.
+        </TextBlock>-->
+
+    </Grid>
+</Window>
